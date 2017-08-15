@@ -1,0 +1,12 @@
+{
+    "name": "mac/income-calc",
+    "authors": [
+        {
+            "name": "Mac Chow",
+            "email": "vifix.mac@gmail.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpexcel": "^1.8"
+    }
+}
