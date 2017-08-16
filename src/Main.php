@@ -55,6 +55,7 @@ foreach ($excel->getActiveSheet()->getRowIterator() as $row) {
 
 $dataByDates = array_reverse($dataByDates);
 $dataByWeeks = array_reverse($dataByWeeks);
+$lessons = array_reverse($lessons);
 
 writeOutput($dataByDates, $lessons, $dailyFilename);
 writeOutput($dataByWeeks, $lessons, $weeklyFilename);
@@ -115,7 +116,7 @@ function parseRow(PHPExcel_Worksheet_Row $row, array $tableHeads)
         }
     }
 
-    return [$date, $type, $content, $isShared, $income, '第' . $week . '周'];
+    return [$date, $type, $content, $isShared, $income, 'W' . $week];
 }
 
 function writeOutput($data, $lessons, $filename)
