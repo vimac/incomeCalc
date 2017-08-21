@@ -55,7 +55,6 @@ foreach ($excel->getActiveSheet()->getRowIterator() as $row) {
 
 $dataByDates = array_reverse($dataByDates);
 $dataByWeeks = array_reverse($dataByWeeks);
-$lessons = array_reverse($lessons);
 
 writeOutput($dataByDates, $lessons, $dailyFilename);
 writeOutput($dataByWeeks, $lessons, $weeklyFilename);
